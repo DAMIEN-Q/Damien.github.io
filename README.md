@@ -66,7 +66,7 @@ sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
 plotQualityProfile(fnFs[1:2])
 ```
 
-![](DADA2_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](unnamed-chunk-5-1.png)<!-- -->
 
 C’est un diagnostic visuel pour voir la qualité des bases (nucléotides)
 le long des lectures.
