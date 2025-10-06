@@ -1,7 +1,5 @@
 # CC1 ADM DADA2 Tutoriel
 ## Damien Quemener
-Tutoriel DADA2 (CC1 de ADM)
-================
 
 ## **Installation du package “DADA2”**
 
