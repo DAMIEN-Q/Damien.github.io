@@ -91,7 +91,7 @@ le long des lectures.
 plotQualityProfile(fnRs[1:2])
 ```
 
-![](DADA2_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](unnamed-chunk-6-1.png)<!-- -->
 
 Contrairement à la qualité des lectures forward, la qualité des lectures
 reverse sont beaucoup moindre. On observe une chute brutale de la
@@ -178,7 +178,7 @@ plotErrors(errF, nominalQ=TRUE)
     ## Warning: Transformation introduced infinite values in continuous y-axis
     ## Transformation introduced infinite values in continuous y-axis
 
-![](DADA2_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](unnamed-chunk-11-1.png)<!-- -->
 
 - Les points correspondent aux taux d’erreurs observés
 - La ligne noire correspond au taux d’erreur estimé par l’algorithme
