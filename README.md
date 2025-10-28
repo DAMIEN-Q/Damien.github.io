@@ -102,7 +102,7 @@ reverse sont beaucoup moindre. On observe une chute brutale de la
 qualité (en vert) ainsi que sa variation (en orange). Ce phénomène est
 normal avec Illumina et DADA2 à un algorithme assez robuste pour les
 séquences de moindre qualité en intégrant des informations de qualité
-dans son modèle d’erreur. Ici, bonne qualité de lecture reverse juqu'à environ 160 pb
+dans son modèle d’erreur. Ici, bonne qualité de lecture reverse jusqu'à environ 160 pb
 
 ## **Filtrer et Rogner**
 
