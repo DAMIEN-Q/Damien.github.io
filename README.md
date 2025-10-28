@@ -1,7 +1,9 @@
 # CC1 ADM DADA2 Tutoriel
 ## Damien Quemener
 
-## **Installation du package “DADA2”**
+Ce script s’appuie sur le tutoriel du pipeline DADA2 pour réaliser l’analyse des données contenues dans le fichier MiSeq_SOP.
+
+## **Installation/Activation du package “DADA2”**
 
 ``` r
 library(dada2)
@@ -40,6 +42,8 @@ list.files(path)
     ## [43] "mouse.dpw.metadata"            "mouse.time.design"            
     ## [45] "stability.batch"               "stability.files"
 
+On commence par indiquer le dossier où sont stockés les fichiers FASTQ, puis on affiche son contenu afin de vérifier la présence des échantillons et des fichiers de référence.
+
 ## **Création des listes des fichiers Forward (fnFs) et Reverse (fnRs)**
 
 ``` r
@@ -49,12 +53,14 @@ fnFs = sort(# Les met dans l'ordre alphabétique
 
 fnRs <- sort(list.files(path, pattern="_R2_001.fastq", full.names = TRUE))
 ```
+Récupère les fichiers forward (R1) et reverse (R2)
 
 ## **Nom de chaque échantillon extrait du nom du fichier**
 
 ``` r
 sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
 ```
+Extrait les noms des échantillons
 
 ## **Visualisation des profils de qualité de lecture**
 
@@ -81,7 +87,7 @@ le long des lectures.
 - La ligne rouge signifie la proportion des lectures qui atteignent
   cette position (Illumina = plate, les lectures ont la même longeur)
 
-–\> Ici, bonne qualité de lecture forward
+–\> Ici, bonne qualité de lecture forward jusqu'à environ 240 pb
 
 ## **Qualité de lecture Reverse**
 
@@ -96,7 +102,7 @@ reverse sont beaucoup moindre. On observe une chute brutale de la
 qualité (en vert) ainsi que sa variation (en orange). Ce phénomène est
 normal avec Illumina et DADA2 à un algorithme assez robuste pour les
 séquences de moindre qualité en intégrant des informations de qualité
-dans son modèle d’erreur.
+dans son modèle d’erreur. Ici, bonne qualité de lecture reverse juqu'à environ 160 pb
 
 ## **Filtrer et Rogner**
 
@@ -145,7 +151,7 @@ head(out) # Affiche un tableau résumant le filtrage
 
 Le tableau montre clairement le nombre lectures avant filtrage
 (reads.in) et après filtrage (reads.out). Ici, on observe que la
-majorité des lectures est conservé (seulement un petite partie filtrée)
+majorité des lectures est conservé (seulement une petite partie filtrée)
 
 ## **Taux d’erreur de séquençage**
 
